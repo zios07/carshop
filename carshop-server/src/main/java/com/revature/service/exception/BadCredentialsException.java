@@ -1,4 +1,4 @@
-package com.revature.exception;
+package com.revature.service.exception;
 
 public class BadCredentialsException extends Exception {
 

@@ -1,4 +1,4 @@
-package com.revature.security;
+package com.revature.config;
 
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.AuthenticationManager;

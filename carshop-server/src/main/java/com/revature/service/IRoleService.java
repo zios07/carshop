@@ -1,7 +1,7 @@
 package com.revature.service;
 
 import com.revature.entity.Role;
-import com.revature.exception.ServiceException;
+import com.revature.service.exception.ServiceException;
 
 import java.util.List;
 

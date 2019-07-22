@@ -1,8 +1,9 @@
 package com.revature.controller;
 
 import com.revature.entity.Role;
-import com.revature.exception.ServiceException;
 import com.revature.service.IRoleService;
+import com.revature.service.exception.ServiceException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,22 +1,21 @@
 package com.revature.service.impl;
 
-import com.revature.dao.UserRepository;
-import com.revature.dto.ProfileDTO;
-import com.revature.entity.Role;
-import com.revature.entity.User;
-import com.revature.exception.NotFoundException;
-import com.revature.exception.ServiceException;
-import com.revature.service.IRoleService;
-import com.revature.service.IUserService;
-import org.apache.logging.log4j.util.Strings;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
+import com.revature.dao.UserRepository;
+import com.revature.entity.Role;
+import com.revature.entity.User;
+import com.revature.service.IRoleService;
+import com.revature.service.IUserService;
+import com.revature.service.exception.NotFoundException;
+import com.revature.service.exception.ServiceException;
 
 @Service
 public class UserService implements IUserService {
@@ -102,17 +101,6 @@ public class UserService implements IUserService {
         String username = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return this.findUserByUsername(username);
 
-    }
-
-    @Override
-    public User updateUserProfile(ProfileDTO profileDTO) {
-        User user = repo.findById(profileDTO.getUserID()).get();
-        user.setFirstName(profileDTO.getFirstName());
-        user.setLastName(profileDTO.getLastName());
-        if (!Strings.isEmpty(profileDTO.getPassword())) {
-            user.getAccount().setPassword(passwordEncoder.encode(profileDTO.getPassword()));
-        }
-        return repo.save(user);
     }
 
     @Override

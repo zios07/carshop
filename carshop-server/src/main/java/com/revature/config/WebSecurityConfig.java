@@ -1,7 +1,5 @@
 package com.revature.config;
 
-import com.revature.security.JwtAuthenticationFilter;
-import com.revature.security.JwtAuthorizationFilter;
 import com.revature.service.IUserService;
 import com.revature.service.UserDetailsServiceImpl;
 import com.revature.service.impl.AccountService;

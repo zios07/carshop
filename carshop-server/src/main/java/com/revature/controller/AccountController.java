@@ -1,8 +1,9 @@
 package com.revature.controller;
 
 import com.revature.entity.Account;
-import com.revature.exception.NotFoundException;
 import com.revature.service.IAccountService;
+import com.revature.service.exception.NotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

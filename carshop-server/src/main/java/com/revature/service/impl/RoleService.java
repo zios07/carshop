@@ -4,8 +4,9 @@ import com.revature.dao.RoleRepository;
 import com.revature.dao.UserRepository;
 import com.revature.entity.Role;
 import com.revature.entity.User;
-import com.revature.exception.ServiceException;
 import com.revature.service.IRoleService;
+import com.revature.service.exception.ServiceException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

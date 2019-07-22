@@ -2,7 +2,8 @@ package com.revature.service;
 
 import com.revature.entity.Account;
 import com.revature.entity.User;
-import com.revature.exception.NotFoundException;
+import com.revature.service.exception.NotFoundException;
+
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

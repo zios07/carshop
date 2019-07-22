@@ -1,13 +1,14 @@
 package com.revature.controller.handler;
 
-import com.revature.exception.BadCredentialsException;
-import com.revature.exception.NotFoundException;
-import com.revature.exception.ServiceException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+
+import com.revature.service.exception.BadCredentialsException;
+import com.revature.service.exception.NotFoundException;
+import com.revature.service.exception.ServiceException;
 
 @ControllerAdvice
 public class ExceptionsHandler {

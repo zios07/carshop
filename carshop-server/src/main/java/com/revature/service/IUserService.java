@@ -1,9 +1,8 @@
 package com.revature.service;
 
-import com.revature.dto.ProfileDTO;
 import com.revature.entity.User;
-import com.revature.exception.NotFoundException;
-import com.revature.exception.ServiceException;
+import com.revature.service.exception.NotFoundException;
+import com.revature.service.exception.ServiceException;
 
 import java.util.List;
 
@@ -24,8 +23,6 @@ public interface IUserService {
 	User findUserByUsername(String username) throws NotFoundException;
 
 	User getConnectedUser() throws NotFoundException;
-
-    User updateUserProfile(ProfileDTO user);
 
     User getUserByUsername(String username);
 }
