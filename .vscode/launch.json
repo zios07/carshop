@@ -4,7 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - ServerApplication",
             "request": "launch",
-            "mainClass": "common.server.ServerApplication",
+            "mainClass": "com.revature.ServerApplication"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ServerApplication",
+            "request": "launch",
+            "mainClass": "com.revature.ServerApplication",
             "projectName": "common-server"
         }
     ]
